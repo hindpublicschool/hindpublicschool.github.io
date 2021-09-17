@@ -29,6 +29,7 @@
 
   --heading-font-size: 4rem;
 
+  --principal-width: 300px;
   --message-text-font-size: 2rem;
 
   --text-font-size: 2rem;
@@ -50,7 +51,6 @@ body
 
 a
 {
-  color: black;
   text-decoration: none;
 }
 
@@ -137,6 +137,12 @@ a
   transition: transform 0.3s;
   height: 100%;
   width: 100%;
+  transition: transform 0.2s;
+}
+
+.social-icon > svg:hover
+{
+  transform: scale(1.2);
 }
 
 .social-icon:not(:last-of-type)
@@ -236,11 +242,22 @@ a
   padding-bottom: 20px;
 }
 
-.english-medium,
+.english-medium
+{
+  background-color: navy;
+  padding: 10px 30px 20px 30px;
+  width: 100%;
+  margin: 10px auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: start;
+  justify-content: space-around;
+}
+
 .hindi-medium
 {
   background-color: navy;
-  padding: 10px 30px;
+  padding: 20px 30px 20px 30px;
   width: 100%;
   margin: 10px auto;
   display: flex;
@@ -332,7 +349,7 @@ a
   border-radius: 50%;
   border: 5px solid gold;
   margin: 40px 30px 20px 0px;
-  width: 70%;
+  width: var(--principal-width);
 }
 
 .footer
@@ -448,6 +465,9 @@ a
     --standard-font-size: 2rem;
     --subject-font-size: 1rem;
 
+    --principal-width: 200px;
+    --message-text-font-size: 1.5rem;
+
     --heading-font-size: 2rem;
 
     --text-font-size: 1rem;
@@ -504,7 +524,7 @@ a
   }
 }
 
-@media screen and (max-width: 480px)
+@media screen and (max-width: 768px)
 {
   :root
   {
@@ -521,6 +541,9 @@ a
     --medium-font-size: 0.5rem;
     --standard-font-size: 1rem;
     --subject-font-size: 0.8rem;
+
+    --principal-width: 100px;
+    --message-text-font-size: 1rem;
 
     --heading-font-size: 1rem;
 
